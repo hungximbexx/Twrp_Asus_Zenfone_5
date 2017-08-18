@@ -89,8 +89,8 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-TARGET_RECOVERY_FSTAB := device/asus/T00F/recovery/root/etc/twrp.fstab
 TARGET_RECOVERY_DEVICE_MODULES := libinit_ctp librecovery_updater_ctp
+TARGET_RECOVERY_FSTAB := device/asus/T00F/rootdir/etc/fstab.redhookbay
 
 # TWRP
 TW_THEME := portrait_hdpi
@@ -103,6 +103,7 @@ BOARD_HAS_NO_REAL_SDCARD := true
 TW_INCLUDE_NTFS_3G := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 RECOVERY_VARIANT := twrp
+TARGET_RECOVERY_FSTAB := device/asus/T00F/recovery/root/etc/twrp.fstab
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/asus/T00F/sepolicy
