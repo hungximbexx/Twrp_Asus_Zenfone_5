@@ -47,7 +47,7 @@ TARGET_KERNEL_SOURCE := kernel/asus/T00F
 TARGET_KERNEL_ARCH := x86
 BOARD_KERNEL_IMAGE_NAME := bzImage
 TARGET_KERNEL_CONFIG := lineage_T00F_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := /home/nguyenhung9x/twrp/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9/bin/x86_64-linux-android-gcc-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := /home/nguyenhung9x/Twrp/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9/bin/x86_64-linux-android-
 
 BOARD_KERNEL_CMDLINE := init=/init pci=noearly console=ttyS0 console=logk0 earlyprintk=nologger bootup.uart=0 loglevel=8 kmemleak=off androidboot.selinux=permissive androidboot.bootmedia=sdcard androidboot.hardware=redhookbay watchdog.watchdog_thresh=60 androidboot.spid=xxxx:xxxx:xxxx:xxxx:xxxx:xxxx androidboot.serialno=01234567890123456789 ip=50.0.0.2:50.0.0.1::255.255.255.0::usb0:on vmalloc=172M
 
