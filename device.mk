@@ -29,6 +29,9 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    fstab.redhookbay \
+    init.recovery.redhookbay.rc \
+    init.recovery.usb.rc \ 
     intel_prop.cfg \
     ueventd.redhookbay.rc 
 
@@ -53,4 +56,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.sys.perf.device.powersave=800000 \
     ro.sys.perf.device.full=1633000 \
     ro.sys.perf.device.touchboost=1330000
+    
+    
 
