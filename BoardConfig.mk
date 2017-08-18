@@ -86,13 +86,12 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1320157184 # // 1259MB
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Recovery
-BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-TARGET_RECOVERY_DEVICE_MODULES := libinit_ctp librecovery_updater_ctp
-TARGET_RECOVERY_FSTAB := device/asus/T00F/rootdir/etc/fstab.redhookbay
+TARGET_RECOVERY_DEVICE_MODULES := libinit_ctp librecovery_updater_ctp thermald upi_ug31xx
 
 # TWRP
+TW_INPUT_BLACKLIST := "accelerometer\x0akxtj9_accel"
 TW_THEME := portrait_hdpi
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
@@ -103,7 +102,13 @@ BOARD_HAS_NO_REAL_SDCARD := true
 TW_INCLUDE_NTFS_3G := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 RECOVERY_VARIANT := twrp
+TW_INCLUDE_JB_CRYPTO := true
+TW_INCLUDE_L_CRYPTO := true
+TW_EXTRA_LANGUAGES := true
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
+BOARD_HAS_LARGE_FILESYSTEM 	:= true
 TARGET_RECOVERY_FSTAB := device/asus/T00F/recovery/root/etc/twrp.fstab
+TARGET_RECOVERY_DEVICE_MODULES := libinit_ctp librecovery_updater_ctp thermald upi_ug31xx
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/asus/T00F/sepolicy
